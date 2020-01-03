@@ -1,0 +1,72 @@
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+@import '~@blueprintjs/table/lib/css/table.css';
+
+.clients-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-height: 100vh;
+  box-sizing: border-box;
+  margin: 0 50px 0 100px;
+  padding: 15px;
+
+  .header-cell {
+    font-size: 22px;
+    border: none;
+  }
+
+  .blueprint-table {
+    box-shadow: none;
+    margin: 20px auto;
+    outline: none;
+
+    .bp3-table-quadrant-main {
+      background: white !important;
+    }
+
+    .blueprint-column {
+      flex-grow: 1;
+      font-size: 16px;
+    }
+
+    .bp3-table-header {
+      text-transform: capitalize;
+      font-size: 22px;
+    }
+
+    .table-cell {
+      display: flex;
+      flex-grow: 1;
+      cursor: text;
+
+    }
+  }
+
+  .bp3-table-cell {
+    display: flex;
+    flex-grow: 1;
+    box-shadow: none;
+    border-bottom: 1px solid lightgray;
+
+    .bp3-table-truncated-text {
+      align-self: center;
+    }
+  }
+
+  .paging-container {
+    display: flex;
+    justify-content: space-between;
+
+    .info-group {
+      display: flex;
+
+      & > div {
+        margin-right: 15px;
+        align-self: center;
+      }
+    }
+  }
+
+}
