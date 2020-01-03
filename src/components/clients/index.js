@@ -100,34 +100,37 @@ export default class Clients extends PureComponent {
         return (
             <div className='clients-container'>
                 <h2>Clients</h2>
-                <Table
-                    selectionModes='NONE'
-                    className='blueprint-table bp3-table-striped'
-                    defaultColumnWidth={400}
-                    defaultRowHeight={35}
-                    numRows={this.state.dummyData.length}
-                    enableColumnResizing={false}
-                    enableMultipleSelection={false}
-                    enableRowHeader={false}
-                    enableRowResizing={false}
-                >
-                    {
-                        this.renderColumns()
-                    }
-                </Table>
+                <div className='table-container'>
+                    <Table
+                        selectionModes='NONE'
+                        className='blueprint-table'
+                        defaultColumnWidth={400}
+                        defaultRowHeight={35}
+                        numRows={this.state.dummyData.length}
+                        enableColumnResizing={false}
+                        enableMultipleSelection={false}
+                        enableRowHeader={false}
+                        enableRowResizing={false}
+                    >
+                        {
+                            this.renderColumns()
+                        }
+                    </Table>
+                </div>
                 <div className="paging-container">
                     <div>
                         <HTMLSelect
+                            className='blueprint-select'
                             options={this.selectOptions}
                             onChange={this.changeHandler}
                         />
                     </div>
                     <div className='info-group'>
                         <div>
-                            1 - {this.endRecords > dummyData.length || this.itemsPerPage > dummyData.length ? dummyData.length : this.endRecords}
-                            of {dummyData.length}
+                            1 - {this.endRecords > dummyData.length || this.itemsPerPage > dummyData.length ? dummyData.length : this.endRecords} of
+                            {dummyData.length}
                         </div>
-                        <Button onClick={this.loadMoreHandler}>Load More</Button>
+                        <Button className='blueprint-button' onClick={this.loadMoreHandler}>Load More</Button>
                     </div>
                 </div>
             </div>
