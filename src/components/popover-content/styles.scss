@@ -1,0 +1,17 @@
+.popover-content {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+
+  &_row {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+    .column-name {
+      text-transform: capitalize;
+    }
+
+  }
+
+}
